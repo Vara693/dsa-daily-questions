@@ -1,4 +1,26 @@
 {
+  "gfg/indexes-of-subarray--sum.cpp": {
+    "hash": "06ea6c2747a252c4",
+    "meta": {
+      "Difficulty": "",
+      "Link": "",
+      "Platform": "GFG",
+      "Summary": "No description available \u2014 add a header comment.",
+      "Tags": "",
+      "Title": "Indexes Of Subarray  Sum"
+    }
+  },
+  "leetcode/Best-Time-to-Buy-and-Sell-Stock-II.cpp": {
+    "hash": "f146143d99e13a2a",
+    "meta": {
+      "Difficulty": "Medium",
+      "Link": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/",
+      "Platform": "LeetCode",
+      "Summary": "You are given an integer array prices where prices[i] is the price of a given stock on the i th day. On each day, you may decide to buy and/or sell the stock. You can only hold at most one share of the stock at any\u2026",
+      "Tags": "Array, Dynamic Programming, Greedy",
+      "Title": "Best Time to Buy and Sell Stock II"
+    }
+  },
   "leetcode/Best-Time-to-Buy-and-Sell-Stock-III.cpp": {
     "hash": "aced80f0e19930ee",
     "meta": {
@@ -8,6 +30,39 @@
       "Summary": "You are given an array prices where prices[i] is the price of a given stock on the i th day. Find the maximum profit you can achieve. You may complete at most two transactions . Note: You may not engage in multiple\u2026",
       "Tags": "Array, Dynamic Programming",
       "Title": "Best Time to Buy and Sell Stock III"
+    }
+  },
+  "leetcode/Best-Time-to-Buy-and-Sell-Stock-IV.cpp": {
+    "hash": "66c43159c0906773",
+    "meta": {
+      "Difficulty": "Hard",
+      "Link": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/",
+      "Platform": "LeetCode",
+      "Summary": "You are given an integer array prices where prices[i] is the price of a given stock on the i th day, and an integer k . Find the maximum profit you can achieve. You may complete at most k transactions: i.e. you may buy\u2026",
+      "Tags": "Array, Dynamic Programming",
+      "Title": "Best Time to Buy and Sell Stock IV"
+    }
+  },
+  "leetcode/Best-Time-to-Buy-and-Sell-Stock-with-Cooldown.cpp": {
+    "hash": "991e8fc7e8a4fe4f",
+    "meta": {
+      "Difficulty": "Medium",
+      "Link": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/",
+      "Platform": "LeetCode",
+      "Summary": "You are given an array prices where prices[i] is the price of a given stock on the i th day. Find the maximum profit you can achieve. You may complete as many transactions as you like (i.e., buy one and sell one share\u2026",
+      "Tags": "Array, Dynamic Programming",
+      "Title": "Best Time to Buy and Sell Stock with Cooldown"
+    }
+  },
+  "leetcode/Find-Greatest-Common-Divisor-of-Array.cpp": {
+    "hash": "e22e183a1d980ccd",
+    "meta": {
+      "Difficulty": "Easy",
+      "Link": "https://leetcode.com/problems/find-greatest-common-divisor-of-array/",
+      "Platform": "LeetCode",
+      "Summary": "Given an integer array nums , return the greatest common divisor of the smallest number and largest number in nums . The greatest common divisor of two numbers is the largest positive integer that evenly divides both\u2026",
+      "Tags": "Array, Math, Number Theory",
+      "Title": "Find Greatest Common Divisor of Array"
     }
   },
   "leetcode/asteroid-collision.cpp": {
@@ -109,6 +164,17 @@
       "Title": "Find Pivot Index"
     }
   },
+  "leetcode/find-the-difference-of-two-arrays.cpp": {
+    "hash": "919c5ecb6cc7f220",
+    "meta": {
+      "Difficulty": "Easy",
+      "Link": "https://leetcode.com/problems/find-the-difference-of-two-arrays/",
+      "Platform": "LeetCode",
+      "Summary": "Given two 0-indexed integer arrays nums1 and nums2 , return a list answer of size 2 where: answer[0] is a list of all distinct integers in nums1 which are not present in nums2 . answer[1] is a list of all distinct\u2026",
+      "Tags": "Array, Hash Table",
+      "Title": "Find the Difference of Two Arrays"
+    }
+  },
   "leetcode/find-the-highest-altitude.cpp": {
     "hash": "f6810f00f9c7423c",
     "meta": {
@@ -131,6 +197,17 @@
       "Title": "Indexes Of Subarray  Sum"
     }
   },
+  "leetcode/lru-cache.cpp": {
+    "hash": "1893ede74326386f",
+    "meta": {
+      "Difficulty": "Medium",
+      "Link": "https://leetcode.com/problems/lru-cache/",
+      "Platform": "LeetCode",
+      "Summary": "Design a data structure that follows the constraints of a Least Recently Used (LRU) cache . Implement the LRUCache class: LRUCache(int capacity) Initialize the LRU cache with positive size capacity . int get(int key)\u2026",
+      "Tags": "Hash Table, Linked List, Design, Doubly-Linked List",
+      "Title": "LRU Cache"
+    }
+  },
   "leetcode/num_of_subsets.cpp": {
     "hash": "501fc2db175d7b9e",
     "meta": {
@@ -140,6 +217,17 @@
       "Summary": "No description available \u2014 add a header comment.",
       "Tags": "",
       "Title": "Num Of Subsets"
+    }
+  },
+  "leetcode/subsets.cpp": {
+    "hash": "501fc2db175d7b9e",
+    "meta": {
+      "Difficulty": "Medium",
+      "Link": "https://leetcode.com/problems/subsets/",
+      "Platform": "LeetCode",
+      "Summary": "Given an integer array nums of unique elements, return all possible subsets (the power set) . The solution set must not contain duplicate subsets. Return the solution in any order . Example 1: Input: nums = [1,2,3]\u2026",
+      "Tags": "Array, Backtracking, Bit Manipulation",
+      "Title": "Subsets"
     }
   },
   "leetcode/sum-of-gcd-of-formed-pairs.cpp": {
