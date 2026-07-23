@@ -109,6 +109,17 @@
       "Title": "Indexes Of Subarray  Sum"
     }
   },
+  "leetcode/num_of_subsets.cpp": {
+    "hash": "501fc2db175d7b9e",
+    "meta": {
+      "Difficulty": "",
+      "Link": "",
+      "Platform": "LEETCODE",
+      "Summary": "No description available \u2014 add a header comment.",
+      "Tags": "",
+      "Title": "Num Of Subsets"
+    }
+  },
   "leetcode/sum-of-gcd-of-formed-pairs.cpp": {
     "hash": "c5d0087b17f0b2a1",
     "meta": {

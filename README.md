@@ -13,6 +13,7 @@ This table is generated automatically by a GitHub Action every time a new `.cpp`
 <!-- SOLUTIONS:START -->
 | Problem | Platform | Difficulty | Tags | Summary | Link |
 |---|---|---|---|---|---|
+| [Num Of Subsets](leetcode/num_of_subsets.cpp) | LEETCODE | - | - | No description available — add a header comment. | - |
 | [Buy And Sell Stock 3](leetcode/buy-and-sell-stock-3.cpp) | LEETCODE | - | - | No description available — add a header comment. | - |
 | [Find Pivot Index](leetcode/find-pivot-index.cpp) | LEETCODE | - | - | No description available — add a header comment. | - |
 | [Buy And Sell Stock 4](leetcode/buy-and-sell-stock-4.cpp) | LEETCODE | - | - | No description available — add a header comment. | - |
