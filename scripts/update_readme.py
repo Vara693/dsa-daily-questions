@@ -191,11 +191,31 @@ def fetch_leetcode_metadata(slug):
     req = urllib.request.Request(
         LEETCODE_GRAPHQL_URL,
         data=payload,
-        headers={"Content-Type": "application/json", "Referer": f"https://leetcode.com/problems/{slug}/"},
+        headers={
+            "Content-Type": "application/json",
+            "Referer": f"https://leetcode.com/problems/{slug}/",
+            "Origin": "https://leetcode.com",
+            # LeetCode's endpoint blocks requests without a browser-like UA
+            # (the default "Python-urllib/3.x" UA gets rejected outright).
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+            ),
+            "Accept": "application/json",
+        },
     )
     try:
         with urllib.request.urlopen(req, timeout=15) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
+            raw = resp.read().decode("utf-8")
+            data = json.loads(raw)
+    except urllib.error.HTTPError as e:
+        body = ""
+        try:
+            body = e.read().decode("utf-8", errors="ignore")[:300]
+        except Exception:
+            pass
+        print(f"  [leetcode] HTTP {e.code} for slug '{slug}': {body}")
+        return None
     except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as e:
         print(f"  [leetcode] fetch failed for slug '{slug}': {e}")
         return None
@@ -419,9 +439,18 @@ def generate_table(cache):
         rel_path = path.relative_to(REPO_ROOT)
         key = rel_path.as_posix()
         h = content_hash(text)
+        top_folder = rel_path.parts[0].lower() if len(rel_path.parts) > 1 else ""
 
         cached = cache.get(key)
-        if cached and cached.get("hash") == h:
+        cache_valid = cached and cached.get("hash") == h
+
+        # A cached LeetCode entry with no Link means a previous fetch failed
+        # (Cloudflare block, wrong slug, transient error, etc). Don't trust
+        # that as a "success" forever — retry it on every run until it works.
+        if cache_valid and top_folder == "leetcode" and not cached["meta"].get("Link"):
+            cache_valid = False
+
+        if cache_valid:
             meta = cached["meta"]
             print(f"[cache hit] {key}")
         else:
